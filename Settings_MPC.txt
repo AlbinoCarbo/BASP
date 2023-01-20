@@ -1,0 +1,26 @@
+$Settings MPC header
+$
+$Number IAU code
+$598
+$
+$Code
+$COD 598
+$
+$Address
+$CON A. Carbognani, OAS, 40050, Loiano (Bologna), Italy [albino.carbognani@inaf.it]
+$
+$Observers
+$OBS A. Carbognani
+$
+$Measurers
+$MEA A. Carbognani
+$
+$Telescope
+$TEL Reflector 1.52-m f/4.75 + CCD
+$
+$StarCatalog
+$NET 2MASS
+$
+$Comments
+$COM coord epoch 2000, astrometric observations to analize with find_orb
+$

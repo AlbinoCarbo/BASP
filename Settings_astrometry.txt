@@ -1,0 +1,43 @@
+$Settings "SST2TDM"
+$Common name of SST images in the format "YYYYMMDD_NNN.fit" (without "_" being added in the script) 
+$SST20210729
+$
+$Path of the SST images
+$/home/albino/Test/
+$
+$Path of the folder where the Python scripts are located
+$/home/albino/Documents/MATLAB/SST_astrometry/
+$
+$Minimum SST images number
+$113
+$
+$Maximum SST image number 
+$121
+$
+$Minimum bias images number 
+$101
+$
+$Maximum bias images number
+$110
+$
+$Observer longitude (degree)
+$11.334444
+$
+$Observer Latitude (degree)
+$44.2591667
+$
+$Observer height (meter)
+$785.000
+$
+$Filter bad astrometry satellite (1=multiple GEO satellites, 2=single satellite, 3=No filter)
+$2
+$
+$Maximum offset allowed to filter out the worst astrometry (arcsec)
+$3.5
+$
+$Delete astrometry in Milky Way (1=Yes, 2=No)
+$2
+$
+$Astrid Threshold (1=faint satellites, 2=medium bright satellites, 3=bright satellites,)
+$3.0
+$

@@ -1,0 +1,5 @@
+Path runtime library Matlab:
+/usr/local/MATLAB/MATLAB_Runtime/v97
+
+Use for compiled version:
+./run_SST2TDM.sh /usr/local/MATLAB/MATLAB_Runtime/v97
