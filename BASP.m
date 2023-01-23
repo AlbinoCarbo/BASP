@@ -117,7 +117,7 @@
 %
 % A. Carbognani, INAF-OAS
 %
-% Versione del 20 gennaio 2023
+% Versione del 23 gennaio 2023
 
 clear all
 
@@ -136,7 +136,7 @@ disp('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
 disp('   ')
 
 % Lettura del file dei Settings
-wholefile_set = fileread('./Settings_astrometry.txt');
+wholefile_set = fileread('./Settings_BASP.txt');
 disp('READ SETTINGS FILE')
 disp('   ') 
 
@@ -362,7 +362,6 @@ for i=Nmin:1:Nmax
          s2 = char(DEC_ast(kk));             % Trasformazione in stringa della DEC
    
          % Define command line for Astrometry.net calibration
-         %command_line_astrometry=strcat('solve-field ', " ", '-L 0.5', " ", '-H 0.7', " ", '-u arcsecperpix', " ", '--ra', " ", s1, " ", '--dec', " ", s2, " ",'--radius 0.5', " ", image_name, ' -N',  " ", image_name_WCS);
          command_line_astrometry=strcat('solve-field ', " ", InfScale, " ", SupScale, " ", '-u arcsecperpix', " ", '--ra', " ", s1, " ", '--dec', " ", s2, " ",'--radius 0.5', " ", image_name, ' -N',  " ", image_name_WCS);
    
          % Display name image to be processed with astrometry.net
@@ -832,7 +831,7 @@ disp(strcat('Save TDM file for satellite number', " ", num2str(SAT(j))))
 disp('  ')
     
 % Nome file astrometria in formato TDM salvato nella cartella indicata da data_path
-output_TDM_file=strcat(data_path, 'SST_',num2str(ANNO(j)), num2str(MESE(j),'%02.f'), num2str(GIORNO(j),'%02.f'), 'T', num2str(ORA(j),'%02.f'), num2str(MINUTI(j),'%02.f'), num2str(fix(SECONDI(j)),'%02.f'), '_', num2str(SAT(j)), '.tdm');
+output_TDM_file=strcat(data_path, 'IT_CASSINI_',num2str(ANNO(j)), num2str(MESE(j),'%02.f'), num2str(GIORNO(j),'%02.f'), 'T', num2str(ORA(j),'%02.f'), num2str(MINUTI(j),'%02.f'), num2str(fix(SECONDI(j)),'%02.f'), '_', num2str(SAT(j)), '.tdm');
 
 % Cancella il file del TDM se è già presente
 if exist(output_TDM_file, 'file')==2
