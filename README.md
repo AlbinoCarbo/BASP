@@ -15,6 +15,9 @@ BASP consists of a main script, **BASP.m**, that run under Matlab, but there is 
 
 BASP has three settings files: **Settings_BASP.txt**, is the main configuration file with the most frequently changing settings such as the name and path of the images to be analysed, the type of analysis and the intensity of the satellite track; **Settings_Astrometry.txt**, is the configuration file for Astrometry.net, here there are the upper and lower limit of the image scale in arcsec/pixel; finally there is **Settings_MPC.txt**, where there is the header of the output file with the astrometric measurements in the Minor Planet Center format. These last two files contain quantities that are rarely changed so, once you save the settings, you can forget about their existence. The settings files are self-explanatory and with sample settings, so we don't need to go through them in detail.
 
+In the case of images with multiple tracks (typically in the case of GEO satellites), BASP selects the track of the desired satellite by automatically downloading the most updated TLE and computing the ephemeris for the observing session using SGP4 model. The SGP4 model functions in SST_SGP4 folder is from 
+[Mahooti 2021](https://www.mathworks.com/matlabcentral/fileexchange/62013-sgp4), with some adjustments to make the output compatible with our pipeline.
+
 ### Make a test
 
 In the **Sample_Images** folder there are 19 images that can be used as a test. Image numbers 101 to 110 are calibration biases, 113 to 121 contain satellite images. These images are already selected in Settings_BASP.txt, just change the paths to make them conform to your system and you can run BASP with the console command ./BASP (compiled version), or by running the BASP.m script with Matlab. During the processing, messages appear informing about the execution status.
