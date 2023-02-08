@@ -17,6 +17,8 @@ BASP has three settings files: **Settings_BASP.txt**, is the main configuration 
 
 ![A typical image for satellite astrometry showing the trace, extract by ASTRiDE, of the Galileo NORAD 41550 taken on the evening of Nov 6, 2020 with the ``Cassini'' telescope.](/Pictures/Galileo_41550.jpg)
 
+![The perimeter of the NORAD 41550 track, from the previous image, as identified by ASTRiDE.](/Pictures/Galileo_41550_track.jpg)
+
 ### Algorithm
 
 **1-** Read the settings parameters and verify that the fits files to be analyzed exist, both the SST images and the calibration biases. The images can have any name followed by a progressive integer. If some number of the file sequence is missing, the software goes to the next one. If all SST files to be processed are missing or all the bias images are missing, the software shows a warning message and stops running. Note that the presence of a settings files makes it possible to use the compiled version without the need to have MATLAB installed in the system. 
