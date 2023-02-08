@@ -15,6 +15,8 @@ BASP consists of a main script, **BASP.m**, that run under Matlab, but there is 
 
 BASP has three settings files: **Settings_BASP.txt**, is the main configuration file with the most frequently changing settings such as the name and path of the images to be analysed, the type of analysis and the intensity of the satellite track; **Settings_Astrometry.txt**, is the configuration file for Astrometry.net, here there are the upper and lower limit of the image scale in arcsec/pixel; finally there is **Settings_MPC.txt**, where there is the header of the output file with the astrometric measurements in the Minor Planet Center format. These last two files contain quantities that are rarely changed so, once you save the settings, you can forget about their existence. The settings files are self-explanatory and with sample settings, so we don't need to go through them in detail.
 
+![A typical image for satellite astrometry showing the trace, extract by ASTRiDE, of the Galileo NORAD 41550 taken on the evening of Nov 6, 2020 with the ``Cassini'' telescope.](/Pictures/Galileo_41550.jpg)
+
 ### Algorithm
 
 **1-** Read the settings parameters and verify that the fits files to be analyzed exist, both the SST images and the calibration biases. The images can have any name followed by a progressive integer. If some number of the file sequence is missing, the software goes to the next one. If all SST files to be processed are missing or all the bias images are missing, the software shows a warning message and stops running. Note that the presence of a settings files makes it possible to use the compiled version without the need to have MATLAB installed in the system. 
