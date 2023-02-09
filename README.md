@@ -1,6 +1,8 @@
 # BASP
 
-Suppose to have a sequence of digital images in **fits format**, taken with a **telescope** and **CCD camera**, of satellites and space debris with a known Norad number. From these images we want the astrometry of the satellite in **Tracking Data Message** (TDM) format, to compute its geocentric orbit. Each image was taken with **sidereal tracking active**, therefore the satellite left a track in the image and we want to measure the equatorial coordinates - right ascension and declination - of all the tracks center. To solve this problem it is possible to use **BASP (Bologna Astrometry Satellites Pipeline)**. 
+Suppose to have a sequence of digital images in **fits format**, taken with a **telescope** and **CCD camera**, of satellites and space debris with a known Norad number. From these images we want the astrometry of the satellite in **Tracking Data Message** (TDM) format, to compute its geocentric orbit. Each image was taken with **sidereal tracking active**, therefore the satellite left a track in the image and we want to measure the equatorial coordinates - right ascension and declination - of all the tracks center. 
+
+To solve this problem it is possible to use **BASP (Bologna Astrometry Satellites Pipeline)**. 
 The main purposes of BASP, is the **automatic** astrometric calibration of the images and the extraction of the satellite's traks to obtain a text file with the J2000 astrometric positions of the center of the track in TDM format (but also save in Minor Planet Center extended format). No correction is made to the extracted equatorial coordinates, such as that for annual aberration. The software was developed under **Linux Xubuntu**, but can run under any Linux system as long as the following external software and their dependencies are installed and running:
 
 **1-** [MATLAB R2019b](https://it.mathworks.com/products/new_products/release2019b.html). Note: it is not necessary if you are using the compiled version of BASP.
